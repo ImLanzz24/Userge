@@ -43,11 +43,11 @@ async def _init() -> None:
         Config.USE_USER_FOR_CLIENT_CHECKS = bool(data['is_user'])
 
 
-@userge.on_cmd("help", about={'header': "Guide to use USERGE commands"}, allow_channels=False)
+@userge.on_cmd("help", about={'header': "Guide to use FADHLANBOT commands"}, allow_channels=False)
 async def helpme(message: Message) -> None:  # pylint: disable=missing-function-docstring
     plugins = userge.manager.enabled_plugins
     if not message.input_str:
-        out_str = f"""⚒ <b><u>(<code>{len(plugins)}</code>) Plugin(s) Available</u></b>\n\n"""
+        out_str = f"""⚒ <b><u>(<code>{len(plugins)}</code>) PLUGIN YANG ADA @allowmeplz</u></b>\n\n"""
         cat_plugins = userge.manager.get_plugins()
         for cat in sorted(cat_plugins):
             if cat == "plugins":
@@ -55,7 +55,7 @@ async def helpme(message: Message) -> None:  # pylint: disable=missing-function-
             out_str += (f"    {_CATEGORY.get(cat, '📁')} <b>{cat}</b> "
                         f"(<code>{len(cat_plugins[cat])}</code>) :   <code>"
                         + "</code>    <code>".join(sorted(cat_plugins[cat])) + "</code>\n\n")
-        out_str += f"""📕 <b>Usage:</b>  <code>{Config.CMD_TRIGGER}help [plugin_name]</code>"""
+        out_str += f"""📕 <b>FADHLANBOT :</b>  <code>{Config.CMD_TRIGGER}help [plugin_name]</code>"""
     else:
         key = message.input_str
         if (not key.startswith(Config.CMD_TRIGGER)
@@ -63,7 +63,7 @@ async def helpme(message: Message) -> None:  # pylint: disable=missing-function-
                 and (len(plugins[key].enabled_commands) > 1
                      or plugins[key].enabled_commands[0].name.lstrip(Config.CMD_TRIGGER) != key)):
             commands = plugins[key].enabled_commands
-            out_str = f"""⚔ <b><u>(<code>{len(commands)}</code>) Command(s) Available</u></b>
+            out_str = f"""⚔ <b><u>(<code>{len(commands)}</code>) PERINTAH YG ADA :V</u></b>
 
 🔧 <b>Plugin:</b>  <code>{key}</code>
 📘 <b>Doc:</b>  <code>{plugins[key].doc}</code>\n\n"""
@@ -151,7 +151,7 @@ if userge.has_bot:
             await callback_query.answer("you are in main menu", show_alert=True)
             return
         if len(pos_list) == 2:
-            text = "🖥 **Userge Main Menu** 🖥"
+            text = "🖥 **FADHLAN BOT Main Menu** 🖥"
             buttons = main_menu_buttons()
         elif len(pos_list) == 3:
             text, buttons = category_data(cur_pos)
@@ -199,7 +199,7 @@ if userge.has_bot:
     @check_owner
     async def callback_mm(callback_query: CallbackQuery):
         await callback_query.edit_message_text(
-            "🖥 **Userge Main Menu** 🖥", reply_markup=InlineKeyboardMarkup(main_menu_buttons()))
+            "🖥 **FADHLAN BOT Main Menu** 🖥", reply_markup=InlineKeyboardMarkup(main_menu_buttons()))
 
     @userge.bot.on_callback_query(filters=filters.regex(pattern=r"^chgclnt$"))
     @check_owner
@@ -376,20 +376,20 @@ if userge.has_bot:
                 id=uuid4(),
                 title="Repo",
                 input_message_content=InputTextMessageContent(
-                    "**Here's how to setup Userge** 😎"
+                    "**Here's how to setup Bot Fadhlan** 😎"
                 ),
-                url="https://github.com/UsergeTeam/Userge",
+                url="https://t.me/gretong_ers",
                 description="Setup Your Own",
-                thumb_url="https://imgur.com/download/Inyeb1S",
+                thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                "🧰 Userge Repo",
-                                url="https://github.com/UsergeTeam/Userge"),
+                                "🧰 GRATISAN ANJ",
+                                url="https://t.me/gretong_ers"),
                             InlineKeyboardButton(
-                                "🖥 Deploy Userge",
-                                url="https://t.me/theUserge/102")
+                                "🖥 CONFIG FREE",
+                                url="https://t.me/gretong_ers")
                         ]
                     ]
                 )
@@ -401,11 +401,11 @@ if userge.has_bot:
                     id=uuid4(),
                     title="Main Menu",
                     input_message_content=InputTextMessageContent(
-                        "🖥 **Userge Main Menu** 🖥"
+                        "🖥 **FADHLAB Main Menu** 🖥"
                     ),
-                    url="https://github.com/UsergeTeam/Userge",
-                    description="Userge Main Menu",
-                    thumb_url="https://imgur.com/download/Inyeb1S",
+                    url="https://t.me/gretong_ers",
+                    description="FADHLAN Main Menu",
+                    thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                     reply_markup=InlineKeyboardMarkup(main_menu_buttons())
                 )
             )
@@ -430,7 +430,7 @@ if userge.has_bot:
                         title=f"A Private Msg to {user.first_name}",
                         input_message_content=InputTextMessageContent(msg_c),
                         description="Only he/she can open it",
-                        thumb_url="https://imgur.com/download/Inyeb1S",
+                        thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                         reply_markup=InlineKeyboardMarkup(prvte_msg)
                     )
                 )
@@ -452,7 +452,7 @@ if userge.has_bot:
                         title="Pm Permit",
                         input_message_content=InputTextMessageContent(text),
                         description="Inline Pm Permit Handler",
-                        thumb_url="https://imgur.com/download/Inyeb1S",
+                        thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                         reply_markup=InlineKeyboardMarkup(buttons)
                     )
                 )
@@ -478,7 +478,7 @@ if userge.has_bot:
                             title="Inline Error Text",
                             input_message_content=InputTextMessageContent(err_text),
                             description="Inline Error text with help support button.",
-                            thumb_url="https://imgur.com/download/Inyeb1S",
+                            thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                             reply_markup=InlineKeyboardMarkup(button)
                         )
                     )
