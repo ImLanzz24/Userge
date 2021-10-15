@@ -128,10 +128,10 @@ if userge.has_bot:
                 )
                 _USERS.append(user_id)
                 await USERS.insert_one({"user_id": user_id})
-            copy_ = "https://github.com/UsergeTeam/Userge/blob/master/LICENSE"
+            copy_ = "https://github.com/ImLanzz24/Userge/blob/master/LICENSE"
             markup = InlineKeyboardMarkup([
                 [
-                    InlineKeyboardButton(text="👥 UsergeTeam", url="https://github.com/UsergeTeam"),
+                    InlineKeyboardButton(text="👥 FadhlanTeam", url="https://t.me/qunthuul"),
                     InlineKeyboardButton(text="🧪 Repo", url=Config.UPSTREAM_REPO)
                 ],
                 [InlineKeyboardButton(text="🎖 GNU GPL v3.0", url=copy_)]
