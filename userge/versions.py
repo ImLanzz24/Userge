@@ -17,5 +17,5 @@ __minor__ = 6
 __micro__ = 0
 
 __python_version__ = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
-__license__ = "[GNU GPL v3.0](https://github.com/UsergeTeam/Userge/blob/master/LICENSE)"
-__copyright__ = "[UsergeTeam](https://github.com/UsergeTeam)"
+__license__ = "[GNU GPL v3.0](https://github.com/ImLanzz24/Userge/blob/master/LICENSE)"
+__copyright__ = "[FadhlanTeam](https://t.me/gretong_ers/)"
