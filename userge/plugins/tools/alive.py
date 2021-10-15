@@ -27,7 +27,7 @@ _LOG = logging.getLogger(__name__)
 _IS_TELEGRAPH = False
 _IS_STICKER = False
 
-_DEFAULT = "https://t.me/theUserge/31"
+_DEFAULT = "https://t.me/gretong_ers"
 _CHAT, _MSG_ID = None, None
 _LOGO_ID = None
 
@@ -66,7 +66,7 @@ def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKe
     markup = None
     output = f"""
 **⏱ Uptime** : `{userge.uptime}`
-**💡 Version** : `{get_version()}`
+**💡 Versinya** : `{get_version()}`
 **⚙️ Mode** : `{_get_mode().upper()}`
 
 • **Sudo**: `{_parse_arg(Config.SUDO_ENABLED)}`
@@ -84,11 +84,11 @@ def _get_alive_text_and_markup(message: Message) -> Tuple[str, Optional[InlineKe
 🎖 **{versions.__license__}** | 👥 **{versions.__copyright__}** | 🧪 **[Repo]({Config.UPSTREAM_REPO})**
 """
     else:
-        copy_ = "https://github.com/UsergeTeam/Userge/blob/master/LICENSE"
+        copy_ = "https://t.me/gretong_ers"
         markup = InlineKeyboardMarkup([
             [
-                InlineKeyboardButton(text="👥 UsergeTeam", url="https://github.com/UsergeTeam"),
-                InlineKeyboardButton(text="🧪 Repo", url=Config.UPSTREAM_REPO)
+                InlineKeyboardButton(text="👥 FadhlanTeam", url="https://t.me/gretong_ers"),
+                InlineKeyboardButton(text="🧪 Kintil", url=Config.UPSTREAM_REPO)
             ],
             [InlineKeyboardButton(text="🎖 GNU GPL v3.0", url=copy_)]
         ])
