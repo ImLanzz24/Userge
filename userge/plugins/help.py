@@ -47,7 +47,7 @@ async def _init() -> None:
 async def helpme(message: Message) -> None:  # pylint: disable=missing-function-docstring
     plugins = userge.manager.enabled_plugins
     if not message.input_str:
-        out_str = f"""⚒ <b><u>(<code>{len(plugins)}</code>) Plugin(s) Available</u></b>\n\n"""
+        out_str = f"""⚒ <b><u>(<code>{len(plugins)}</code>) PLUGIN YG TERSEDIA TOD</u></b>\n\n"""
         cat_plugins = userge.manager.get_plugins()
         for cat in sorted(cat_plugins):
             if cat == "plugins":
@@ -70,7 +70,7 @@ async def helpme(message: Message) -> None:  # pylint: disable=missing-function-
             for i, cmd in enumerate(commands, start=1):
                 out_str += (f"    🤖 <b>cmd(<code>{i}</code>):</b>  <code>{cmd.name}</code>\n"
                             f"    📚 <b>info:</b>  <i>{cmd.doc}</i>\n\n")
-            out_str += f"""📕 <b>Usage:</b>  <code>{Config.CMD_TRIGGER}help [command_name]</code>"""
+            out_str += f"""📕 <b>Gunakan :</b>  <code>{Config.CMD_TRIGGER}help [command_name]</code>"""
         else:
             commands = userge.manager.enabled_commands
             key = key.lstrip(Config.CMD_TRIGGER)
@@ -97,7 +97,7 @@ if userge.has_bot:
             else:
                 user_dict = await userge.bot.get_user_dict(Config.OWNER_ID[0])
                 await c_q.answer(
-                    f"Only {user_dict['flname']} Can Access this...! Build Your Own @TheUserge 🤘",
+                    f"Only {user_dict['flname']} Can Access this...! Build Your Own @qunthuul🤘",
                     show_alert=True)
         return wrapper
 
@@ -151,7 +151,7 @@ if userge.has_bot:
             await callback_query.answer("you are in main menu", show_alert=True)
             return
         if len(pos_list) == 2:
-            text = "🖥 **Userge Main Menu** 🖥"
+            text = "🖥 **FadhlanBots Main Menu** 🖥"
             buttons = main_menu_buttons()
         elif len(pos_list) == 3:
             text, buttons = category_data(cur_pos)
@@ -199,7 +199,7 @@ if userge.has_bot:
     @check_owner
     async def callback_mm(callback_query: CallbackQuery):
         await callback_query.edit_message_text(
-            "🖥 **Userge Main Menu** 🖥", reply_markup=InlineKeyboardMarkup(main_menu_buttons()))
+            "🖥 **FadhlanBot Main Menu** 🖥", reply_markup=InlineKeyboardMarkup(main_menu_buttons()))
 
     @userge.bot.on_callback_query(filters=filters.regex(pattern=r"^chgclnt$"))
     @check_owner
@@ -376,20 +376,20 @@ if userge.has_bot:
                 id=uuid4(),
                 title="Repo",
                 input_message_content=InputTextMessageContent(
-                    "**Here's how to setup Userge** 😎"
+                    "**Here's how to setup FadhlanBot** 😎"
                 ),
-                url="https://github.com/UsergeTeam/Userge",
+                url="https://github.com/ImLanzz24/Userge",
                 description="Setup Your Own",
-                thumb_url="https://imgur.com/download/Inyeb1S",
+                thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                "🧰 Userge Repo",
-                                url="https://github.com/UsergeTeam/Userge"),
+                                "🧰  Mwehehe Boy",
+                                url="https://t.me/qunthuul"),
                             InlineKeyboardButton(
-                                "🖥 Deploy Userge",
-                                url="https://t.me/theUserge/102")
+                                "🖥 D Userge",
+                                url="https://t.me/qunthuul")
                         ]
                     ]
                 )
@@ -401,11 +401,11 @@ if userge.has_bot:
                     id=uuid4(),
                     title="Main Menu",
                     input_message_content=InputTextMessageContent(
-                        "🖥 **Userge Main Menu** 🖥"
+                        "🖥 **FadhlanBotMain Menu** 🖥"
                     ),
-                    url="https://github.com/UsergeTeam/Userge",
-                    description="Userge Main Menu",
-                    thumb_url="https://imgur.com/download/Inyeb1S",
+                    url="https://t.me/qunthuul",
+                    description="FadhlanBot Main Menu",
+                    thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                     reply_markup=InlineKeyboardMarkup(main_menu_buttons())
                 )
             )
@@ -430,7 +430,7 @@ if userge.has_bot:
                         title=f"A Private Msg to {user.first_name}",
                         input_message_content=InputTextMessageContent(msg_c),
                         description="Only he/she can open it",
-                        thumb_url="https://imgur.com/download/Inyeb1S",
+                        thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                         reply_markup=InlineKeyboardMarkup(prvte_msg)
                     )
                 )
@@ -452,7 +452,7 @@ if userge.has_bot:
                         title="Pm Permit",
                         input_message_content=InputTextMessageContent(text),
                         description="Inline Pm Permit Handler",
-                        thumb_url="https://imgur.com/download/Inyeb1S",
+                        thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                         reply_markup=InlineKeyboardMarkup(buttons)
                     )
                 )
@@ -478,7 +478,7 @@ if userge.has_bot:
                             title="Inline Error Text",
                             input_message_content=InputTextMessageContent(err_text),
                             description="Inline Error text with help support button.",
-                            thumb_url="https://imgur.com/download/Inyeb1S",
+                            thumb_url="https://i.ibb.co/2SMX7vV/20211010-112307.jpg",
                             reply_markup=InlineKeyboardMarkup(button)
                         )
                     )
