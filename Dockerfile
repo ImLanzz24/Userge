@@ -45,7 +45,7 @@ RUN mkdir -p /tmp/ && \
     rm -rf /tmp/rar*
 
 # clone repository
-RUN git clone https://github.com/UsergeTeam/Userge /app
+RUN git clone https://github.com/ImLanzz24/Userge /app
 
 # install dependencies
 RUN pip install -r requirements.txt
